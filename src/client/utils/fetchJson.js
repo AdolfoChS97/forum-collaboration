@@ -3,12 +3,12 @@ export async function fetchJson(url, method = 'GET', body = {}, headers = { 'Con
         const response = await fetch(
             url, { 
                 method: method, 
-                body: JSON.stringify(body), 
-                headers: { 'Content-Type': 'application/json' } 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: method == 'GET' ? undefined : JSON.stringify(body) 
             }
         )
         if(!response.ok) throw new Error(`${response.status} ${response.statusText}`)
-        return { data: JSON.parse(await response.json()), statusCode: response.status, statusText: response.statusText }
+        return { data: await response.json(), statusCode: response.status, statusText: response.statusText }
     } catch (e) {
         throw e;
     }

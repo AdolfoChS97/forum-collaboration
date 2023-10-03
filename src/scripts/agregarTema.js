@@ -4,7 +4,7 @@ var form = document.getElementById('form')
 
 form.addEventListener('submit', async function (e) {
     e.preventDefault()
-    const tema = document.getElementById('tema').value
-    const { data, statusCode } = await fetchJson('http://localhost:8080/src/api/MainSearch.php', 'POST', {tema: tema})
-    
+    const params = new URLSearchParams(`theme=${document.getElementById('tema').value}`).toString()
+    const { data, statusCode } = await fetchJson(`http://${window.location.host}/src/api/Search.php?${params}`, 'GET',)
+    console.log(data, statusCode);
 });
