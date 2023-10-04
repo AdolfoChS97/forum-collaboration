@@ -1,7 +1,7 @@
 <?php
 require 'ErrorDisplayer.php';
 
-class ConnectionDatabase {
+class Database {
     
     private $host;
     private $user;
@@ -27,7 +27,6 @@ class ConnectionDatabase {
     
 }
 
-$connectionDatabase = new ConnectionDatabase('0.0.0.0:3306', 'root', '1234', 'project', 3306);
+$database = new Database('0.0.0.0:3306', 'root', '1234', 'project', 3306);
 
-$connectionDatabase->connect();
 
