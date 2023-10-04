@@ -8,7 +8,7 @@ export function createTable(data, headerLabels) {
   
     for (let i = 0; i < headerLabels.length; i++) {
       const headerCell = headerRow.insertCell()
-      headerCell.textContent = headerLabels[i]
+      if(i > 0) headerCell.textContent = headerLabels[i]
     }
   
     const tbody = table.createTBody()
