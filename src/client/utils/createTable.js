@@ -1,6 +1,6 @@
 export function createTable(data, headerLabels) {
     document.querySelectorAll('table').forEach((table) => table.remove())
-    document.querySelectorAll('h1').forEach((h1) => h1.remove())
+    document.querySelectorAll('h3').forEach((h3) => h3.remove())
     
     const table = document.createElement('table')
     const thead = table.createTHead()
