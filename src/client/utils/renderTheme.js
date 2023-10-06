@@ -1,13 +1,17 @@
-export function renderTheme(title, theme, author, created_at, updated_at ) {
-    const h2 = document.createElement('h2')
-    const p = document.createElement('p')
-    const small = document.createElement('small')
+export function renderTheme(data) {
+    data?.forEach(item => {
+        const { TITLE, THEME, AUTHOR } = item
 
-    h2.textContent = title
-    p.textContent = theme
-    small.textContent = author
+        const h2 = document.createElement('h2')
+        const p = document.createElement('p')
+        const small = document.createElement('small')
 
-    document.body.appendChild(h2)
-    document.body.appendChild(p)
-    document.body.appendChild(small)
+        h2.innerText = `Titulo: ${TITLE}`
+        p.innerText = `Tema: ${THEME}`
+        small.innerText = `autor: ${AUTHOR}`
+
+        document.body.appendChild(h2)
+        document.body.appendChild(p)
+        document.body.appendChild(small)
+    })
 }
