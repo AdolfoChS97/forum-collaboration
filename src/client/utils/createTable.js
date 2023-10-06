@@ -19,7 +19,14 @@ export function createTable(data, headerLabels) {
         Object.keys(row).map((key, i) => {
           if(i > 0) {
             const cell = tRow.insertCell()
-            cell.textContent = row[key]
+            if (key == 'THEME') {
+              const anchor = document.createElement('a');
+              anchor.href = `http://${window.location.host}/src/views/themeDetails.html?theme=${i}`;
+              anchor.textContent = row[key];
+              cell.appendChild(anchor);
+            } else { 
+              cell.textContent = row[key]
+            }
           }
         })
       })
