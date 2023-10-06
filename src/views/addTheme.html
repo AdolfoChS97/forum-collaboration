@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar tema</title>
+</head>
+<body>
+    <a href="../../index.html" rel="noopener noreferrer">Foro</a>
+    <a href="." target="_blank" rel="noopener noreferrer">agregar tema</a>
+    
+    <form id="form" method="post">
+        <label for="titulo">titulo</label>
+        <input type="text" id="titulo">
+
+        <label for="tema">tema</label>
+        <input type="text" id="tema">
+
+        <label for="autor">autor</label>
+        <input type="text" id="autor">
+
+        <button type="submit">agregar</button>
+    </form>
+
+    <script type="module" src="../client/utils/fetchJson.js"></script>
+    <script type="module" src="../scripts/addTheme.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+</head>
+<body>
+
+    <a href="." rel="noopener noreferrer">Foro</a>
+    <a href="./src/views/addTheme.html" rel="noopener noreferrer">agregar tema</a>
+    <br>
+    <form id="form">
+        <label for="tema">Buscar tema</label>
+        <input type="text" id="tema">
+        <button type="submit">Buscar</button>
+    </form>
+    <form id="form-author">
+        <label for="author">Buscar tema por autor</label>
+        <select id="author-select">
+            <option value="NONE">Seleccione un autor</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <script type="module" src="./src/client/utils/createTable.js"></script>
+    <script type="module" src="./src/client/utils/fetchJson.js"></script>
+    <script type="module" src="./src/scripts/searchByAuthor.js"></script>
+    <script type="module" src="./src/scripts/searchAuthors.js"></script>
+    <script type="module" src="./src/scripts/searchTheme.js"></script>
+</body>
+</html>
